@@ -2,6 +2,7 @@ from members.views.FamilyDetails import FamilyDetails
 from members.views.ConfirmFamily import ConfirmFamily
 from members.views.PersonCreate import PersonCreate
 from members.views.PersonUpdate import PersonUpdate
+from members.views.PersonDelete import PersonDelete
 from members.views.WaitingListSetSubscription import WaitingListSetSubscription
 from members.views.DeclineInvitation import DeclineInvitation
 from members.views.ActivitySignup import ActivitySignup

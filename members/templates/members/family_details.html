@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
  	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,6 +8,8 @@
     {% load bootstrap3 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+	{% load static %}
+	<script src="{% static "members/js/actions.js" %}"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -33,6 +34,7 @@
                   <th class="col-xs-2" align="left">Postnr./by</th>
                   <th class="col-xs-2" align="left">Email</th>
                   <th class="col-xs-1" align="left">Telefon</th>
+				  <th>Handlinger</th>
                 </tr>
               </thead>
               <tbody>
@@ -58,6 +60,7 @@
                     <td><p>{{person.zipcode}} {{person.city}}</p></td>
                     <td><p>{{person.email}}</p></td>
                     <td><p>{{person.phone}}</p></td>
+					<td><p><button onclick="deletePerson('{% url 'person_delete' family.unique person.id %}', this, '{{person.name}}')">Slet</button></p></td>
                   </tr>
                 {% endfor %}
               </tbody>
